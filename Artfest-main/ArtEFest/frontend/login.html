@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Art & Fest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Seus estilos CSS */
+    body {
+      background: linear-gradient(135deg, #ff4d9a, #ff66b3, #ff80cc);
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .login-card {
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: none;
+    }
+    .btn-primary {
+      background-color: #ff4d9a;
+      border-color: #ff4d9a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card login-card">
+          <div class="card-body p-5">
+            <h2 class="text-center mb-4">Login</h2>
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+            <p id="mensagem" class="text-center mt-3"></p> <p class="text-center mt-3">Não tem conta? <a href="cadastrar.html">Cadastre-se aqui</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      try {
+        // ALERTA: Endpoint correto agora é /auth/login
+        const response = await fetch('http://localhost:3000/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, senha })
+        });
+
+        const mensagemElement = document.getElementById('mensagem'); // Elemento para exibir mensagens
+        const data = await response.json(); // Pega a resposta JSON do backend
+
+        if (response.ok) { // Status 2xx indica sucesso
+          mensagemElement.textContent = data.message || "Login realizado com sucesso!";
+          mensagemElement.style.color = 'green';
+          // Opcional: Se o backend retornar um token JWT, você pode armazená-lo aqui
+          // localStorage.setItem('token', data.token);
+
+          // Redirecionar para a página de administração ou dashboard
+          window.location.href = 'adm.html'; // Ou outra página de dashboard
+        } else { // Status de erro (ex: 401, 404, 500)
+          mensagemElement.textContent = data.message || "Email ou senha incorretos.";
+          mensagemElement.style.color = 'red';
+        }
+      } catch (error) {
+        console.error('Erro de rede ou no servidor:', error);
+        const mensagemElement = document.getElementById('mensagem');
+        mensagemElement.textContent = "Erro de conexão. Verifique se o servidor está rodando.";
+        mensagemElement.style.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>

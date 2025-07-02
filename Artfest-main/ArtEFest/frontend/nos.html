@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre Nós - Art & Fest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffdce0, #fff3c4, #d4f8e8, #d3e5ff, #e4d4ff, #ffdce0);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+        
+        .title-font {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        
+        .hero-section {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        
+        .gallery-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        
+        .team-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .highlight-box {
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: #f5aad3;
+        }
+        
+        .nav-pills .nav-link {
+            color: #333;
+        }
+        
+        footer {
+            background-color: #f5aad3d2;
+            color: #fff;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color: #f8a5c2;">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="catalogo.html">Art & Fest</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="catalogo.html">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="nos.html">Sobre Nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <div class="container mt-4">
+        <div class="hero-section">
+            <div class="text-center">
+                <h1 class="display-4 fw-bold">Nossa História</h1>
+                <p class="lead">Transformando momentos em memórias desde 2015</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="container">
+        <!-- Gallery Section -->
+        <h2 class="text-center mb-4 title-font">Nossos Momentos Especiais</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid gallery-img w-100" alt="Festa infantil">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid gallery-img w-100" alt="Evento corporativo">
+            </div>
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid gallery-img w-100" alt="Casamento">
+            </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="highlight-box">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="title-font">Nossa Missão</h2>
+                    <p class="lead">Criar experiências memoráveis através de decorações e recursos festivos excepcionais.</p>
+                    <p>Na Art & Fest, acreditamos que cada celebração merece ser única e especial. Nosso objetivo é fornecer produtos de alta qualidade que ajudem a transformar seus eventos em momentos inesquecíveis.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid rounded" alt="Nossa missão">
+                </div>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <h2 class="text-center my-5 title-font">Nossos Valores</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#f5aad3" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg>
+                        </div>
+                        <h5 class="card-title">Paixão</h5>
+                        <p class="card-text">Amamos o que fazemos e isso se reflete em cada produto que oferecemos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#f5aad3" class="bi bi-stars" viewBox="0 0 16 16">
+                                <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+                            </svg>
+                        </div>
+                        <h5 class="card-title">Criatividade</h5>
+                        <p class="card-text">Inovamos constantemente para oferecer designs únicos e personalizados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#f5aad3" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                            </svg>
+                        </div>
+                        <h5 class="card-title">Compromisso</h5>
+                        <p class="card-text">Nos dedicamos a superar as expectativas de nossos clientes em cada evento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <h2 class="text-center my-5 title-font">Conheça Nosso trabalho</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="team-card">
+                    <img src="c:\Users\User\Desktop\trabalho 2.0\fotos\baloes.webp" class="card-img-top" alt="Ana Silva">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Arcos de balões</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team-card">
+                    <img src="c:\Users\User\Desktop\trabalho 2.0\fotos\doces Image 2025-04-08 at 19.12.16 (1).jpeg" class="card-img-top" alt="Carlos Mendes">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Esculturas personalizadas</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team-card">
+                    <img src="c:\Users\User\Desktop\trabalho 2.0\fotos\arranjos.jpg" class="card-img-top" alt="Juliana Costa">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Arranjos personalizadas</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="team-card">
+                    <img src="c:\Users\User\Desktop\trabalho 2.0\fotos\temas3 2025-03-26 at 07.26.47.jpeg" class="card-img-top" alt="Roberto Alves">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Temas pegue e monte</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Footer -->
+    
+<footer class="py-4 mt-5" style="background-color: #f8a5c2; color: white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="title-font">Art & Fest</h5>
+        <p>Recursos e decorações personalizadas para festas únicas.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Links Rápidos</h5>
+        <ul class="list-unstyled">
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nos.html">Sobre Nós</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contato</h5>
+        <p>Email: contato@artfest.com</p>
+        <p>Telefone: (11) 1234-5678</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="mb-0">&copy; 2025 Art & Fest. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
